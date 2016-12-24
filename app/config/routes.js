@@ -12,8 +12,8 @@ var routes = (
   <Router history={hashHistory}>
     <Route path='/' component={Main}>
       <IndexRoute component={Home} />
-      <Route path='playerOne' header='player One' component={promptContainer} />
-      <Route path='playerTwo/:playerOne' header='player Two' component={promptContainer} />
+      <Route path='playerOne' header='Player One' component={promptContainer} />
+      <Route path='playerTwo/:playerOne' header='Player Two' component={promptContainer} />
     </Route>
   </Router>
 );
