@@ -2,19 +2,33 @@ import React from 'react';
 import {transparentBg} from '../styles';
 // var transparentBg = require('../styles').transparentBg;
 
-class promptContainer extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      username: "",
-    };
-  }
+var promptContainer = React.createClass({
+  getInitialState() {
+    return{
+      username: ''
+    }
+  },
 
   onUpdateUser(e) {
     this.setState({
       username: e.target.value
     })
-  }
+  },
+
+  onSubmitUser(e){
+    e.preventDefault();
+    var username = this.state.username;
+    console.log(this.props.routeParams.playOne);
+    this.setState({
+      username: ''
+    });
+
+    if(this.props.routeParams.playOne){
+
+    } else{
+
+    }
+  },
 
   render() {
     return (
@@ -33,13 +47,15 @@ class promptContainer extends React.Component {
       </div>
     )
   }
+});
 
-  // getInitialState() {
-  //   return{
-  //     username: ''
-  //   }
+
+// class promptContainer extends React.Component {
+  // constructor() {
+  //   super()
+  //   this.state = {
+  //     username: "",
+  //   };
   // }
-
-};
-
+//};
 module.exports = promptContainer
