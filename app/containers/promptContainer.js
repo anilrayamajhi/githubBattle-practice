@@ -1,6 +1,6 @@
 import React from 'react';
-import {transparentBg, btnColor} from '../styles';
-import {Prompt} from '../components/Prompt'
+// import {transparentBg, btnColor} from '../styles';
+import Prompt from '../components/Prompt'
 // import {Link} from 'react-router';
 // var transparentBg = require('../styles').transparentBg;
 
@@ -42,8 +42,6 @@ var promptContainer = React.createClass({
     } else{
       // console.log(this);
       // console.log(this.context);
-
-
       this.context.router.push('/playerTwo/' + this.state.username)
     }
   },
@@ -54,7 +52,7 @@ var promptContainer = React.createClass({
       onSubmitUser={this.handleSubmitUser}
       onUpdateUser={this.handleUpdateUser}
       header={this.props.route.header}
-      username={this.state.username}/>
+      username={this.state.username} />
     )
   }
 });
