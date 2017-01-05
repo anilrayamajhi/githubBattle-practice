@@ -19,6 +19,8 @@ let helpers = {
               return data.data;
               // console.log('DATA', data.data);
             })
+        }).catch((err) =>{
+          console.log('ERROR', err);
         })
     }
 }

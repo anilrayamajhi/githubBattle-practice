@@ -1,11 +1,14 @@
 var React = require('react');
 import {transparentBg, btnColor} from '../styles';
 
-function ConfirmBattle(props){
-  // return (props.isLoading) ? <p> LOADING! </p> : <p> CONFIRM BATTLE!! </p>
-  return (
-    <h1 className="jumbotron col-sm-12 text-center" style={transparentBg}> ganey  {props.header} </h1>
-  )
+function puke(obj) {
+  return <pre>{JSON.stringify(obj, null, ' ')}</pre>
+}
+
+function ConfirmBattle(props){console.log('RENDER', props);
+  return (props.isLoading)
+    ? <p style={transparentBg}> LOADING! </p>
+    : <div style={transparentBg}> CONFIRM BATTLE!! <br /> {puke(props)}</div>
 }
 
 module.exports = ConfirmBattle;
