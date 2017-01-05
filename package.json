@@ -7,9 +7,10 @@
     "start": "webpack-dev-server",
     "prod": "webpack -p"
   },
-  "author": "Tyler McGinnis <tylermcginnis33@gmail.com> (http://tylermcginnis.com)",
+  "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.15.3",
     "raven-js": "^3.3.0",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",

@@ -8,6 +8,9 @@ var promptContainer = React.createClass({
   contextTypes: {
     //add router to context so that no need to call react-router in case of using same component
     router: React.PropTypes.object.isRequired
+    // can also be used by inporting eg:
+    //var PropTypes = 'router'.PropTypes; then;
+    // router: PropTypes.object.isRequired
   },
 
   getInitialState() {
@@ -25,18 +28,18 @@ var promptContainer = React.createClass({
   handleSubmitUser(e){
     e.preventDefault();
     var username = this.state.username;
-    // console.log(this.props);
+    // console.log(this.state);
+    // console.log(this);
     this.setState({
       username: ''
     });
-
-    if(this.props.routeParams.playOne){
+    if(this.props.routeParams.playerOne){
       // console.log(this.context);
       this.context.router.push({
-        pathname: '/battle',
+        pathname: '/battle/',
         query: {
           playerOne: this.props.routeParams.playerOne,
-          playerTwo: this.props.username
+          playerTwo: this.state.username
         }
       })
     } else{

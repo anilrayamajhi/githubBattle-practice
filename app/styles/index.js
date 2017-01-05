@@ -1,6 +1,7 @@
 var styles = {
   transparentBg: {
-    background: 'transparent'
+    background: "transparent",
+    color: "white"
   },
   btnColor: {
     backgroundColor: 'pink',
