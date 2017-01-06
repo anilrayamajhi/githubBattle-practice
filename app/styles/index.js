@@ -7,6 +7,12 @@ var styles = {
     backgroundColor: 'pink',
     border: 'none',
     color: '#946262'
+  },
+  space: {
+    marginTop: '25px',
+  },
+  dimension: {
+    width: '300px'
   }
 };
 
