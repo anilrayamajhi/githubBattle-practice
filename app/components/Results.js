@@ -5,6 +5,7 @@ import {transparentBg, space} from '../styles';
 import UserDetailsWrapper from './UserDetailsWrapper';
 import UserDetails from './UserDetails';
 import MainContainer from './MainContainer';
+import Loading from './Loading';
 
 // function puke(obj) {
 //   return <pre>{JSON.stringify(obj, null, ' ')}</pre>
@@ -22,19 +23,25 @@ function StartOver(){
   )
 }
 
+function Tie(){
+  return (
+    <MainContainer>
+      <h1>It's a tie</h1>
+      <StartOver />
+    </MainContainer>
+  )
+}
+
 function Results (props){
   if(props.isLoading === true){
     return(
-      <h1 style={transparentBg}>LOADING!</h1>
+      <Loading />
     )
   }
 
   if(props.scores[0] === props.scores[1]){
     return(
-      <MainContainer>
-        <h1>It's a tie</h1>
-        <StartOver />
-      </MainContainer>
+      <Tie />
     )
   }
 

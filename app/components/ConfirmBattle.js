@@ -5,6 +5,7 @@ import {transparentBg, btnColor, space} from '../styles';
 import UserDetailsWrapper from './UserDetailsWrapper';
 import UserDetails from './UserDetails';
 import MainContainer from './MainContainer';
+import Loading from './Loading';
 
 function puke(obj) {
   return <pre>{JSON.stringify(obj, null, ' ')}</pre>
@@ -12,7 +13,7 @@ function puke(obj) {
 
 function ConfirmBattle(props){
   return (!!props.isLoading)
-    ? <p style={transparentBg}> LOADING! </p>
+    ?   <Loading />
     : <MainContainer>
         <h1>Confirm Players</h1>
         <div className='col-sm-8 col-sm-offset-2'>
