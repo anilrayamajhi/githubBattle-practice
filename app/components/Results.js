@@ -25,7 +25,7 @@ function StartOver(){
 function Results (props){
   if(props.isLoading === true){
     return(
-      <p>LOADING!</p>
+      <h1 style={transparentBg}>LOADING!</h1>
     )
   }
 
