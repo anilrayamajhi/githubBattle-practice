@@ -3,16 +3,17 @@ import {PropTypes} from 'react';
 import {Link} from 'react-router';
 import {transparentBg, btnColor, space} from '../styles';
 import UserDetailsWrapper from './UserDetailsWrapper';
-import UserDetails from './UserDetails'
+import UserDetails from './UserDetails';
+import MainContainer from './MainContainer';
 
 function puke(obj) {
   return <pre>{JSON.stringify(obj, null, ' ')}</pre>
 }
 
-function ConfirmBattle(props){console.log('RENDER', props);
+function ConfirmBattle(props){
   return (!!props.isLoading)
     ? <p style={transparentBg}> LOADING! </p>
-    : <div className="jumbotron col-sm-12 text-center" style={transparentBg}>
+    : <MainContainer>
         <h1>Confirm Players</h1>
         <div className='col-sm-8 col-sm-offset-2'>
           <UserDetailsWrapper header='Player 1'>
@@ -32,7 +33,7 @@ function ConfirmBattle(props){console.log('RENDER', props);
             </Link>
           </div>
         </div>
-      </div>
+      </MainContainer>
 }
 
 ConfirmBattle.proptypes = {

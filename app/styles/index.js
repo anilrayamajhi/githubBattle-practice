@@ -13,6 +13,9 @@ var styles = {
   },
   dimension: {
     width: '300px'
+  },
+  text: {
+    color: 'black'
   }
 };
 

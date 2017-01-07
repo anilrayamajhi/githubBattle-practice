@@ -7,7 +7,8 @@ var IndexRoute = ReactRouter.IndexRoute;
 var Main = require('../components/Main');
 var Home = require("../components/Home");
 var promptContainer = require("../containers/promptContainer");
-import ConfirmBattleContainer from '../containers/ConfirmBattleContainer'
+import ConfirmBattleContainer from '../containers/ConfirmBattleContainer';
+import ResultsContainer from '../containers/ResultsContainer';
 
 
 var routes = (
@@ -17,6 +18,7 @@ var routes = (
       <Route path='playerOne' header='Player One' component={promptContainer} />
       <Route path='playerTwo/:playerOne' header='Player Two' component={promptContainer} />
       <Route path='battle' component={ConfirmBattleContainer} />
+      <Route path='results' component={ResultsContainer} />
     </Route>
   </Router>
 );

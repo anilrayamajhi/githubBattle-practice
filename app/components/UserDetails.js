@@ -1,11 +1,12 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
-import {dimension} from '../styles';
+import {dimension, text} from '../styles';
 
-function UserDetails (user) {console.log(user.info.name);
+function UserDetails (user) {
+  // console.log(user.scoress);
   return (
-    <div>
-      {!!user.score && <li className="list-group-item"><h3>Score: {user.score}</h3></li>}
+    <div style={text}>{user.scores}
+      {!!user.scores && <li className="list-group-item"><h3>scores: {user.scores}</h3></li>}
       <li className="list-group-item"> <img src={user.info.avatar_url} className="img-rounded img-responsive" style={dimension}/></li>
       {user.info.name && <li className="list-group-item">Name: {user.info.name}</li>}
       <li className="list-group-item">Username: {user.info.login}</li>
@@ -20,7 +21,7 @@ function UserDetails (user) {console.log(user.info.name);
 }
 
 UserDetails.propTypes = {
-  score: PropTypes.number,
+  scores: PropTypes.number,
   info: PropTypes.shape({
     avatar_url: PropTypes.string.isRequired,
     blog: PropTypes.string,
