@@ -5,10 +5,10 @@ import {dimension, text} from '../styles';
 function UserDetails (user) {
   // console.log(user.scoress);
   return (
-    <div style={text}>{user.scores}
+    <div style={text}>
       {!!user.scores && <li className="list-group-item"><h3>scores: {user.scores}</h3></li>}
       <li className="list-group-item"> <img src={user.info.avatar_url} className="img-rounded img-responsive" style={dimension}/></li>
-      {user.info.name && <li className="list-group-item">Name: {user.info.name}</li>}
+      {user.info.name && <li className="list-group-item"><strong>Name: {user.info.name}</strong></li>}
       <li className="list-group-item">Username: {user.info.login}</li>
       {user.info.location && <li className="list-group-item">Location: {user.info.location}</li>}
       {user.info.company && <li className="list-group-item">Company: {user.info.company}</li>}

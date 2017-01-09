@@ -26,7 +26,7 @@ function StartOver(){
 function Tie(){
   return (
     <MainContainer>
-      <h1>It's a tie</h1>
+      <h1>Tie</h1>
       <StartOver />
     </MainContainer>
   )
@@ -35,7 +35,7 @@ function Tie(){
 function Results (props){
   if(props.isLoading === true){
     return(
-      <Loading />
+      <Loading text="One moment" speed={700}/>
     )
   }
 

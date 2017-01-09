@@ -50,7 +50,7 @@ var Loading = React.createClass({
 
   render: function(){
     return (
-      <div className="jumbotron col-sm-12 text-center" style={Object.assign(transparentBg, styles.container)}>
+      <div className="jumbotron col-sm-12 text-center" style={Object.assign(styles.container, transparentBg)}>
         {this.state.text}
       </div>
     )
