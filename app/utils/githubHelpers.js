@@ -1,12 +1,12 @@
 import axios from 'axios';
 
 //is case of rate limit
-var id = "YOUR_CLIENT_ID";
-var sec = "YOUR_SECRET_ID";
+var id = "d9308aacf8b204d361fd";
+var sec = "62551cc02cee983fff0bac41baf170eb5a312c1c";
 var params = "?client_id=" + id + "&client_secret=" + sec
 
 function getUserInfo(username) {
-    return axios.get('https://api.github.com/users/' + username)
+    return axios.get('https://api.github.com/users/' + username + params)
 }
 
 function getRepos(username) {
